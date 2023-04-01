@@ -1,9 +1,36 @@
 import React from 'react'
 import Footer from '../Footer/Footer'
+import React ,{useState,useEffect} from 'react';
+import { Link,useNavigate } from "react-router-dom";
+import {signOut} from "firebase/auth"
+import {auth} from "../../firebase"
 import "./HomePage.css"
 import Navbar from './Navbar/Navbar'
 
 const HomePage = () => {
+    const navigate=useNavigate();
+    const[userName,setUserName] = useState("");
+    useEffect(()=>{
+      auth.onAuthStateChanged((user)=>{
+        if(user){
+          setUserName(user.displayName)
+        } else {
+          setUserName("")
+        }
+      })
+    },[])
+
+  const handleSubmission=()=>{
+    signOut(auth).then(()=>{
+        navigate("/login");
+
+      return true;
+
+    }).catch((err)=>{
+      console.log(err);
+      return false;
+    })
+  }
   return (
     <>
        <Navbar/>
