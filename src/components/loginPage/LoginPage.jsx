@@ -3,6 +3,7 @@ import "./LoginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
+import Navbar from "../Navbar/Navbar";
 const LoginPage = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -39,9 +40,11 @@ const LoginPage = () => {
       });
   };
   return (
+    <>
+        <Navbar/>
     <div>
       <img src="./trackIMG.jpg" className="bgImage" alt="" />
-      <div className="loginform inputDetails sm:mt-20 text-center">
+      <div className="loginform inputDetails  text-center">
         <div className="loginTitle text-center   font-semibold mt-2">
           <p className="text-[3rem] text-[red] loginText">
             Login &nbsp;
@@ -98,6 +101,7 @@ const LoginPage = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

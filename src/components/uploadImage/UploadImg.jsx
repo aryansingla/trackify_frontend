@@ -1,6 +1,7 @@
 import React from 'react'
 import "./UploadImg.css"
 const UploadImg = () => {
+  
   return (
     <div className='uploadContainer'>
         <div className="uploadImage text-center text-[1.5rem] ">
