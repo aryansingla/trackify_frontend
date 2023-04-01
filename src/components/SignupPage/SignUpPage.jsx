@@ -6,6 +6,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { auth, provider } from "../../firebase";
+import Navbar from "../Navbar/Navbar";
 const SignUpPage = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -54,10 +55,12 @@ const SignUpPage = () => {
       });
   };
   return (
+    <>
+    <Navbar/>
     <div>
       <img src="./trackIMG.jpg" className="bgImage" alt="" />
-      <div className="loginform inputDetails sm:mt-6 text-center">
-        <div className=" text-center text-[#0da8bc]  font-semibold mt-16">
+      <div className="loginform inputDetails  text-center">
+        <div className=" text-center text-[#0da8bc]  font-semibold mt-4">
           <p className="text-[3rem] text-[red] loginText">
             Register &nbsp;
             <span className="text-[3rem] text-[white] loginText">Yourself</span>
@@ -120,6 +123,7 @@ const SignUpPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

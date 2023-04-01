@@ -40,7 +40,7 @@ const HomePage = () => {
             <div className=" lg:w-[60%] justify-center pl-28 pr-16 pt-10 loginLeft flex flex-col">
              <h1 className='flex mb-6 text-5xl font-extrabold'>
                  <p className='text-[#222222] mr-2'> Our</p>  <p className='text-[#F95759] '> Mission</p> </h1>
-             <p className='text-lg text-[#444444]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra nulla vel orci rhoncus, eget placerat ligula dapibus. Aliquam id consectetur tellus. Praesent vehicula vestibulum arcu, vitae rhoncus est bibendum sed. Nam vitae lacus turpis. Quisque lacinia magna auctor neque euismod convallis</p>
+             <p className='text-lg text-[#444444]'>Our Mission is to give X-Ray report result as soon as possible and to help the laboratories to decrease the time of generating report and to give reports of tests to their customers ASAP.This will help laboratories to give services to more customers in lesser time.</p>
             </div>
             <div className="loginRight sm:w-[40%]">
                 <img src="./homepic.png" alt="loginImage" className='loginImage w-[50%] sm:w-fit 
