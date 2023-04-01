@@ -36,7 +36,7 @@ const Navbar = () => {
       class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
       <li>
         <a
-          class=" font-semibold text-base text-gray-500 hover:text-gray-600 dark:text-gray-300"
+          class=" text-base text-[#0DA8BC] font-bold"
           href="#">
           Home
         </a>
@@ -56,7 +56,7 @@ const Navbar = () => {
         </svg>
       </li>
       <li>
-        <a class=" text-base text-[#0DA8BC] font-bold" href="#">About Us</a>
+        <a class=" font-semibold text-base text-gray-500 hover:text-gray-600 dark:text-gray-300" href="#">About Us</a>
       </li>
       <li class="text-gray-300">
         <svg
@@ -79,7 +79,7 @@ const Navbar = () => {
       <li>
         <a
           class="font-semibold text-base text-gray-500 hover:text-gray-600 dark:text-gray-300"
-          href="#">
+          href="footer">
           Contact
         </a>
       </li>
