@@ -93,7 +93,9 @@ const HomePage = () => {
     {/* <img className='absolute imgDoc' src="./trackIMG.jpg" alt="home3" /> */}
     <div className='relative flex flex-col items-center justify-center h-[100vh] text-white'>
         <div className='flex text-5xl font-extrabold'> <p className='mr-4 mb-7'>TRY</p> <p className=' text-[#F95759]'>IT</p></div>
-    <p className='w-1/2 text-xl text-center mb-7'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra nulla vel orci rhoncus, eget placerat ligula dapibus. Aliquam id consectetur tellus</p>
+    <p className='w-1/2 text-2xl text-center mb-7'>There are approximately 1 lakh diagonstic centers in India.This pathlab industry is of around USD14796.21 million.
+    Nowadays thousands of xrays are done daily.
+    <br/><span className='text-[#F95759] text-3xl font-extrabold' >Now Labs can save their money by taking subscription of Trackify</span> so that they can save on expenditure of doctor and assistant working and they can improve more on infrastructure.</p>
     <div className='flex'>
     <button className='p-2 mr-6 rounded bg-[#0DA8BC]'>Register</button>
     <button className='p-2 rounded bg-[#F95759]'>Login</button>
