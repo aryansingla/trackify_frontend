@@ -31,7 +31,7 @@ const SignUpPage = () => {
         await updateProfile(user, {
           displayName: values.name,
         });
-        navigate("/");
+        navigate("/upload");
         console.log(user);
       })
       .catch((err) => {
@@ -46,7 +46,7 @@ const SignUpPage = () => {
         // await updateProfile(user, {
         //     displayName: values.name,
         // });
-        navigate("/");
+        navigate("/upload");
         // console.log(user);
       })
       .catch((err) => {

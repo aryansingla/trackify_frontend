@@ -1,6 +1,32 @@
 import React from 'react'
-
+import {useState,useEffect} from 'react';
+import { Link,useNavigate } from "react-router-dom";
+import {signOut} from "firebase/auth"
+import {auth} from "../../firebase"
 const Navbar = () => {
+  const navigate = useNavigate();
+  const[userName,setUserName] = useState("");
+    useEffect(()=>{
+      auth.onAuthStateChanged((user)=>{
+        if(user){
+          setUserName(user.displayName)
+        } else {
+          setUserName("")
+        }
+      })
+    },[])
+
+  const handleSubmission=()=>{
+    signOut(auth).then(()=>{
+        navigate("/login");
+
+      return true;
+
+    }).catch((err)=>{
+      console.log(err);
+      return false;
+    })
+  }
   return (
     <div>
         <div class="py-0">
@@ -22,7 +48,7 @@ const Navbar = () => {
     </a>
     <div class="lg:hidden">
       <button
-        class="navbar-burger flex items-center text-gray-600 dark:text-gray-300 p-3">
+        class="navbar-burger flex items-center text-gray-600  p-3">
         <svg
           class="block h-4 w-4 fill-current"
           viewBox="0 0 20 20"
@@ -36,7 +62,7 @@ const Navbar = () => {
       class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
       <li>
         <a
-          class=" font-semibold text-base text-gray-500 hover:text-gray-600 dark:text-gray-300"
+          class=" font-semibold text-base text-gray-500 hover:text-gray-600 "
           href="#">
           Home
         </a>
@@ -78,21 +104,30 @@ const Navbar = () => {
      
       <li>
         <a
-          class="font-semibold text-base text-gray-500 hover:text-gray-600 dark:text-gray-300"
+          class="font-semibold text-base text-gray-500 hover:text-gray-600  "
           href="#">
           Contact
         </a>
       </li>
     </ul>
     <div class="space-x-2 hidden lg:block">
-      <button
-        class="rounded-md border border-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-[#0DA8BC] hover:bg-[#0dbcbc33] hover:bg-opcaity-1">
+      {userName ? (
+      <>
+        <button class="rounded-md bg-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-opacity-80" onClick={handleSubmission}>
+        SignOut
+      </button>
+      </>
+      ):(
+      <>
+    <button class="rounded-md border border-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-[#0DA8BC] hover:bg-[#0dbcbc33] hover:bg-opcaity-1">
         Login
       </button>
-      <button
-        class="rounded-md bg-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-opacity-80">
+      <button class="rounded-md bg-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-opacity-80">
         SignUp
       </button>
+      </>
+      )}
+      
     </div>
   </nav>
 </div>

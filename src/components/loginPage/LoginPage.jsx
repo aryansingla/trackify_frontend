@@ -22,7 +22,7 @@ const LoginPage = () => {
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        navigate("/");
+        navigate("/upload");
       })
       .catch((err) => {
         console.log(err);
@@ -32,7 +32,7 @@ const LoginPage = () => {
   const handleGoogle = () => {
     signInWithPopup(auth, provider)
       .then(async (res) => {
-        navigate("/");
+        navigate("/upload");
       })
       .catch((err) => {
         console.log(err);
