@@ -62,8 +62,8 @@ const HomePage = () => {
     <div className="px-6 py-4">
       <div className="mb-2 text-xl font-bold">Medical Imaging Analysis</div>
       <p className="text-base text-gray-700 ">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        quia, Nonea! Maiores et perfe
+        Labs generally give reports next day or after 2 days due to the time taken in generating reports. It's a time consuming process. This project will help labs to decrease the time of generating reports and to give reports of tests to their customers ASAP.
+
       </p>
     </div>
    
@@ -76,9 +76,8 @@ const HomePage = () => {
     <div className="px-6 py-4">
       <div className="mb-2 text-xl font-bold">Decision Support</div>
       <p className="text-base text-gray-700 ">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        quia, Nonea! Maiores et perfe
-      </p>
+        It will help doctor(radiologist) who basically reads each and every report and an assistant was also there who write the report.So this software will help to decrease the time of reading the sample and generating the report.
+        </p>
     </div>
    
   </div>
@@ -90,8 +89,7 @@ const HomePage = () => {
     <div className="px-6 py-4">
       <div className="mb-2 text-xl font-bold">Clincal Research</div>
       <p className="text-base text-gray-700 ">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-        quia, Nonea! Maiores et perfe
+        Currently it give 99.3% accuracy. It can be used for research purpose. It can be used to find out the disease of a person by just giving the X-Ray image of the person. By the time it will be improved and it will give 100% accuracy.
       </p>
     </div>
   </div>
