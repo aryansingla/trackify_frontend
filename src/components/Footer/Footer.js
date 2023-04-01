@@ -21,7 +21,7 @@ const Footer = () => {
             </svg>
           </div>
           <div>
-            <h1 class="text-xl font-bold text-black dark:text-gray-100">
+            <h1 class="text-xl font-bold text-black">
               Trackify
             </h1>
           </div>
@@ -129,7 +129,7 @@ const Footer = () => {
           </span>
         </div>
         <div class="mt-8">
-          <ul class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-6 lg:space-x-12 items-start md:items-center justify-center font-semibold text-base text-gray-600 hover:text-gray-500 dark:text-gray-300">
+          <ul class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-6 lg:space-x-12 items-start md:items-center justify-center font-semibold text-base text-gray-600 hover:text-gray-500 ">
             <li>About us</li>
             <li>Our Team</li>
             <li>Our Vision</li>

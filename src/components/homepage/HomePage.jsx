@@ -4,7 +4,7 @@ import { Link,useNavigate } from "react-router-dom";
 import {signOut} from "firebase/auth"
 import {auth} from "../../firebase"
 import "./HomePage.css"
-import Navbar from './Navbar/Navbar'
+import Navbar from '../Navbar/Navbar'
 
 const HomePage = () => {
     const navigate=useNavigate();
@@ -55,7 +55,7 @@ const HomePage = () => {
       alt="Mountain" />
     <div className="px-6 py-4">
       <div className="mb-2 text-xl font-bold">Medical Imaging Analysis</div>
-      <p className="text-base text-gray-700 dark:text-gray-300">
+      <p className="text-base text-gray-700 ">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, Nonea! Maiores et perfe
       </p>
@@ -69,7 +69,7 @@ const HomePage = () => {
       alt="Mountain" />
     <div className="px-6 py-4">
       <div className="mb-2 text-xl font-bold">Decision Support</div>
-      <p className="text-base text-gray-700 dark:text-gray-300">
+      <p className="text-base text-gray-700 ">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, Nonea! Maiores et perfe
       </p>
@@ -83,7 +83,7 @@ const HomePage = () => {
       alt="Mountain" />
     <div className="px-6 py-4">
       <div className="mb-2 text-xl font-bold">Clincal Research</div>
-      <p className="text-base text-gray-700 dark:text-gray-300">
+      <p className="text-base text-gray-700 ">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, Nonea! Maiores et perfe
       </p>
