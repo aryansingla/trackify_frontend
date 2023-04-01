@@ -1,0 +1,13 @@
+.uploadContainer{
+    background-image: url("../../../public/trackIMG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+.uploadImage{
+    margin: 0 auto;
+    margin-top: 5rem;
+}
