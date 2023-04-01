@@ -27,6 +27,13 @@ const Navbar = () => {
       return false;
     })
   }
+
+  const loginHere=()=>{
+    navigate("/login");
+  }
+  const signUpHere=()=>{
+    navigate("/signUp");
+  }
   return (
     <div>
         <div class="py-0">
@@ -63,7 +70,7 @@ const Navbar = () => {
       <li>
         <a
           class=" font-semibold text-base text-gray-500 hover:text-gray-600 "
-          href="#">
+          href="#home">
           Home
         </a>
       </li>
@@ -82,7 +89,7 @@ const Navbar = () => {
         </svg>
       </li>
       <li>
-        <a class=" text-base text-[#0DA8BC] font-bold" href="#">About Us</a>
+        <a class=" text-base text-[#0DA8BC] font-bold" href="#cards">About Us</a>
       </li>
       <li class="text-gray-300">
         <svg
@@ -105,7 +112,7 @@ const Navbar = () => {
       <li>
         <a
           class="font-semibold text-base text-gray-500 hover:text-gray-600  "
-          href="#">
+          href="#footer">
           Contact
         </a>
       </li>
@@ -119,10 +126,10 @@ const Navbar = () => {
       </>
       ):(
       <>
-    <button class="rounded-md border border-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-[#0DA8BC] hover:bg-[#0dbcbc33] hover:bg-opcaity-1">
+    <button onClick={loginHere} class="rounded-md border border-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-[#0DA8BC] hover:bg-[#0dbcbc33] hover:bg-opcaity-1">
         Login
       </button>
-      <button class="rounded-md bg-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-opacity-80">
+      <button onClick={signUpHere} class="rounded-md bg-[#0DA8BC] px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-opacity-80">
         SignUp
       </button>
       </>

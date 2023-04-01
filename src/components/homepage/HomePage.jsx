@@ -30,10 +30,16 @@ const HomePage = () => {
       return false;
     })
   }
+  const loginHere=()=>{
+    navigate("/login");
+  }
+  const signUpHere=()=>{
+    navigate("/signUp");
+  }
   return (
     <>
        <Navbar/>
-   <div className=' container1'>
+   <div id="home" className=' container1'>
  
         <div className="flex flex-col-reverse sm:h-[100vh]  items-center home1 lg:flex-row lg:flex">
             <div className=" lg:w-[60%] justify-center pl-28 pr-16 pt-10 loginLeft flex flex-col">
@@ -47,7 +53,7 @@ const HomePage = () => {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 p-10 home2 place-items-center sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+        <div  id="cards" className="grid grid-cols-1 p-10 home2 place-items-center sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
   <div className="  sm:w-[70%] m-10 overflow-hidden rounded shadow-lg dark:shadow-gray-800">
     <img
       className="w-full"
@@ -97,8 +103,8 @@ const HomePage = () => {
     Nowadays thousands of xrays are done daily.
     <br/><span className='text-[#F95759] text-3xl font-extrabold' >Now Labs can save their money by taking subscription of Trackify</span> so that they can save on expenditure of doctor and assistant working and they can improve more on infrastructure.</p>
     <div className='flex'>
-    <button className='p-2 mr-6 rounded bg-[#0DA8BC]'>Register</button>
-    <button className='p-2 rounded bg-[#F95759]'>Login</button>
+    <button onClick={signUpHere} className='p-2 mr-6 rounded bg-[#0DA8BC]'>Register</button>
+    <button onClick={loginHere} className='p-2 rounded bg-[#F95759]'>Login</button>
     </div></div>
    
 </div>
