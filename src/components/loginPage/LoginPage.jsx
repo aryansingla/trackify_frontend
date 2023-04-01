@@ -3,7 +3,6 @@ import "./LoginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
-import Navbar from "../Navbar/Navbar";
 const LoginPage = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -41,17 +40,16 @@ const LoginPage = () => {
   };
   return (
     <>
-        <Navbar/>
     <div>
       <img src="./trackIMG.jpg" className="bgImage" alt="" />
-      <div className="loginform inputDetails  text-center">
-        <div className="loginTitle text-center   font-semibold mt-2">
-          <p className="text-[3rem] text-[red] loginText">
+      <div className="text-center loginform inputDetails">
+        <div className="mt-2 font-semibold text-center loginTitle">
+          <p className="text-[3rem] text-[#F95759] loginText">
             Login &nbsp;
             <span className="text-[3rem] text-[white] loginText">
               to Continue...
             </span>
-            <img src="./humanicon.png" className="m-auto h-16" alt="" />
+            <img src="./humanicon.png" className="h-16 m-auto" alt="" />
           </p>
         </div>
         <input
@@ -74,14 +72,14 @@ const LoginPage = () => {
           }
           placeholder="Password"
         ></input>
-        <div className="forgotText w-6/12  mt-16 m-auto text-left">
+        <div className="w-6/12 m-auto mt-16 text-left forgotText">
           <a href="/forgotPassword" className="text-[#ffffff] hover:underline">
             Forgot Password ?
           </a>
         </div>
         <div className="forgotText w-6/12  mt-6 m-auto text-left text-[#ffffff]">
         Not a member?
-          <a href="/signup" className=" hover:underline">
+          <a href="/signup" className="ml-1 hover:underline">
         Create new account
           </a>
         </div>
@@ -92,8 +90,19 @@ const LoginPage = () => {
         >
           Log In
         </button>
+      
+       
+        <div className="forgotText w-6/12  mt-6 m-auto text-left flex justify-center text-[#ffffff]">
+        
+          <a href="/" className=" hover:text-[#F95759] hover:underline ">
+        Go back to home
+          </a>
+        </div>
+
+
+
         <div className="SignInGoogle" onClick={handleGoogle}>
-          <button className="googleBtn inline-flex justify-evenly rounded-xl items-center w-4/12 mt-16 bg-[#ffffff] sm:px-3.5 py-1.5 text-base font-semibold leading-7 text-[#000]">
+          <button className="googleBtn inline-flex justify-evenly rounded-xl items-center w-4/12 mt-10 mb-7 bg-[#ffffff] sm:px-3.5 py-1.5 text-base font-semibold leading-7 text-[#000]">
             Sign in with Google
             <img src="./googleLogo.png" alt="google logo" />
           </button>

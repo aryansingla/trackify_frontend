@@ -6,7 +6,6 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { auth, provider } from "../../firebase";
-import Navbar from "../Navbar/Navbar";
 const SignUpPage = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -56,16 +55,15 @@ const SignUpPage = () => {
   };
   return (
     <>
-    <Navbar/>
     <div>
       <img src="./trackIMG.jpg" className="bgImage" alt="" />
-      <div className="loginform inputDetails  text-center">
+      <div className="text-center loginform inputDetails">
         <div className=" text-center text-[#0da8bc]  font-semibold mt-4">
-          <p className="text-[3rem] text-[red] loginText">
+          <p className="text-[3rem] text-[#F95759] loginText">
             Register &nbsp;
             <span className="text-[3rem] text-[white] loginText">Yourself</span>
           </p>
-          <img src="./humanicon.png" className="m-auto h-16" alt="" />
+          <img src="./humanicon.png" className="h-16 m-auto" alt="" />
 
         </div>
         <input
@@ -108,13 +106,19 @@ const SignUpPage = () => {
         </button>
         <div className="forgotText w-6/12  mt-6 m-auto text-left text-[#ffffff]">
           Already a member?
-          <a href="/login" className=" hover:underline">
+          <a href="/login" className="ml-1 hover:underline">
             Login here
           </a>
         </div>
+        <div className="forgotText w-6/12  mt-6 m-auto text-left flex justify-center text-[#ffffff]">
+        
+        <a href="/" className=" hover:text-[#F95759] hover:underline">
+      Go back to home
+        </a>
+      </div>
         <div className="SignInGoogle">
           <button
-            className="googleBtn inline-flex justify-evenly rounded-xl items-center w-6/12 mt-16 bg-[#ffffff] sm:px-3.5 py-1.5 text-base font-semibold leading-7 text-[#000]"
+            className="googleBtn inline-flex justify-evenly rounded-xl items-center w-6/12 mt-10 mb-7 bg-[#ffffff] sm:px-3.5 py-1.5 text-base font-semibold leading-7 text-[#000]"
             onClick={handleGoogle}
           >
             Sign up with Google
