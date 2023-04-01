@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer class=" footer container mx-auto px-10 md:px-0 py-10">
+      <footer id="footer" class="container mx-auto px-10 md:px-0 py-10">
         <div class="flex items-center justify-center space-x-6">
           <div>
             <svg
@@ -21,9 +21,7 @@ const Footer = () => {
             </svg>
           </div>
           <div>
-            <h1 class="text-xl font-bold text-black">
-              Trackify
-            </h1>
+            <h1 class="text-xl font-bold text-black">Trackify</h1>
           </div>
         </div>
         <div class="flex justify-center space-x-6 mt-8">
